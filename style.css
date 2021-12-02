@@ -1,0 +1,80 @@
+.custom_nav{
+    font-size: small;
+    box-shadow: 0px 2px 12px rgba(0,0,0,0.3)
+}
+.custom_nav ul.dropdown-menu{
+    font-size: small;
+}
+.custom-divider{
+    height: 5px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 00%, rgba(33,1,46,1) 0%, rgba(146,53,7,0.9951330874146533) 0%, rgba(97,100,7,1) 0%, rgba(5,4,73,1) 15%, rgba(66,75,4,1) 15%, rgba(9,119,121,1) 35%, rgba(6,71,162,1) 55%, rgba(164,6,139,1) 55%, rgba(5,184,140,1) 65%, rgba(3,137,205,1) 76%, rgba(209,158,3,1) 76%, rgba(0,212,255,1) 100%);
+}
+.main-banner{
+    padding-top: 100px;
+    padding-bottom: 500px;
+    background-image: url(education.jpg);
+    background-size: highlight;
+    color: black;
+    background-color: black;
+}
+.feature-holder{
+    text-align: center;
+    margin-bottom: 25px;
+}
+section.features{
+    padding-top: 35px;
+    padding-bottom: 25px;
+    background-color: whitesmoke;
+}
+.feature-holder h3{
+    font: size 1.2em;
+}
+.feature-holder p {
+     font-size:14px;
+
+}
+section.online-courses, .classroom-training, .reviews-slider{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.online-courses-test-widget, .classroom-courses-test-widget, .reviews-slider-widget{
+    text-align:center;
+}
+.online-courses-test-widget h2,.classroom-courses-test-widget h2, .reviews-slider-widget h2{
+    text-align:1.3em;
+}
+.online-courses-test-widget p, .classroom-courses-test-widget p ,.reviews-slider-widget p{
+    font-size:14px;
+}
+.online-course-card, .review-text-widget{
+    text-align: center;
+    margin-bottom: 25px;
+}
+.online-course-card .card-title{
+    font-size: 1.2em;
+    line-height: 25px
+}
+.card.online-course-card .card-text{
+    font-size: 18px;
+}
+.classroom-training{
+    background-color: whitesmoke;
+}
+.reviews-slider
+.sign-up-form-slidebar, .card-title{
+    font-size: 14px;
+}
+.course-list-item, .card-text{
+    font-size: small;
+    padding-top: 20px;
+    color: black;
+}   
+#review_slider_content li .card{
+    text-align: 50px;
+}
+#review_slider_content li .card img{
+
+}
+
+}
