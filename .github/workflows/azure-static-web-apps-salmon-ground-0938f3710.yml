@@ -15,8 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     permissions:
-       id-token: write
-       contents: read
+      id-token: write
+      contents: read
     steps:
       - uses: actions/checkout@v3
 
@@ -25,11 +25,10 @@ jobs:
         id: idtoken
         with:
           script: |
-            const core = require('@actions/core');
-            return await core.getIDToken();
+            return await core.getIDToken()
           result-encoding: string
 
-      - name: Deploy Static HTML/CSS Site
+      - name: Deploy Static HTML/CSS/JS Site
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
@@ -37,7 +36,7 @@ jobs:
           action: "upload"
           app_location: "/"        # Root folder where index.html is located
           api_location: ""         # No API
-          output_location: "/"     # Use same folder for deployment
+          output_location: "/"     # Same folder for deployment
           app_build_command: ""    # Skip Node.js build
           github_id_token: ${{ steps.idtoken.outputs.result }}
 
@@ -46,7 +45,7 @@ jobs:
         run: |
           curl -H 'Content-Type: application/json' \
                -d "{\"text\": \"Azure Static Web App deployed successfully for branch: ${GITHUB_REF##*/} by ${GITHUB_ACTOR}\"}" \
-               ${{ secrets.TEAMS_WEBHOOK_URL }}
+               ${{ secrets.INCOMING_WEBHOOK }}
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
@@ -62,4 +61,4 @@ jobs:
         run: |
           curl -H 'Content-Type: application/json' \
                -d "{\"text\": \"Pull request closed for branch: ${GITHUB_REF##*/}\"}" \
-               ${{ secrets.TEAMS_WEBHOOK_URL }}
+               ${{ secrets.INCOMING_WEBHOOK }}
